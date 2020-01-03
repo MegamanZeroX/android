@@ -21,235 +21,235 @@
 21
 22    <uses-sdk
 23        android:minSdkVersion="14"
-23-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml
+23-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml
 24        android:targetSdkVersion="14" />
-24-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml
+24-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml
 25
 26    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-26-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:23:5-81
-26-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:23:22-78
+26-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:23:5-81
+26-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:23:22-78
 27    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-27-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:24:5-88
-27-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:24:22-85
+27-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:24:5-88
+27-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:24:22-85
 28    <uses-permission android:name="android.permission.INTERNET" />
-28-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:25:5-67
-28-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:25:22-64
+28-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:25:5-67
+28-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:25:22-64
 29    <uses-permission android:name="android.permission.READ_CONTACTS" />
-29-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:26:5-72
-29-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:26:22-69
+29-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:26:5-72
+29-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:26:22-69
 30    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
-30-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:27:5-74
-30-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:27:22-71
+30-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:27:5-74
+30-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:27:22-71
 31    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
-31-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:28:5-80
-31-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:28:22-77
+31-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:28:5-80
+31-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:28:22-77
 32    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-32-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:29:5-71
-32-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:29:22-68
+32-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:29:5-71
+32-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:29:22-68
 33    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
-33-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:30:5-74
-33-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:30:22-71
+33-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:30:5-74
+33-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:30:22-71
 34    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-34-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:31:5-81
-34-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:31:22-78
+34-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:31:5-81
+34-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:31:22-78
 35
 36    <application
-36-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:33:5-142:19
+36-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:33:5-142:19
 37        android:debuggable="true"
 38        android:icon="@drawable/icon_app"
-38-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:34:9-42
+38-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:34:9-42
 39        android:label="@string/app_name"
-39-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:35:9-41
+39-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:35:9-41
 40        android:testOnly="true" >
 41        <activity
-41-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:36:9-49:20
+41-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:36:9-49:20
 42            android:name="net.micode.notes.ui.NotesListActivity"
-42-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:37:13-49
+42-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:37:13-49
 43            android:configChanges="keyboard"
-43-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:38:13-45
+43-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:38:13-45
 44            android:label="@string/app_name"
-44-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:39:13-45
+44-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:39:13-45
 45            android:launchMode="singleTop"
-45-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:40:13-43
+45-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:40:13-43
 46            android:theme="@style/HighlightTextAppearancePrimary"
-46-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:41:13-66
+46-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:41:13-66
 47            android:uiOptions="splitActionBarWhenNarrow"
-47-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:42:13-57
+47-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:42:13-57
 48            android:windowSoftInputMode="adjustPan" >
-48-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:43:13-52
+48-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:43:13-52
 49            <intent-filter>
-49-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:45:13-48:29
+49-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:45:13-48:29
 50                <action android:name="android.intent.action.MAIN" />
-50-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:46:17-69
-50-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:46:25-66
+50-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:46:17-69
+50-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:46:25-66
 51
 52                <category android:name="android.intent.category.LAUNCHER" />
-52-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:47:17-77
-52-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:47:27-74
+52-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:47:17-77
+52-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:47:27-74
 53            </intent-filter>
 54        </activity>
 55        <activity
-55-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:51:9-74:20
+55-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:51:9-74:20
 56            android:name="net.micode.notes.ui.NoteEditActivity"
-56-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:52:13-48
+56-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:52:13-48
 57            android:configChanges="keyboardHidden|orientation|screenSize"
-57-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:53:13-74
+57-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:53:13-74
 58            android:launchMode="singleTop"
-58-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:54:13-43
+58-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:54:13-43
 59            android:theme="@style/HighlightTextAppearancePrimary" >
-59-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:55:13-66
+59-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:55:13-66
 60            <intent-filter>
-60-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:59:13-64:29
+60-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:59:13-64:29
 61                <action android:name="android.intent.action.INSERT_OR_EDIT" />
-61-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:60:17-79
-61-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:60:25-76
+61-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:60:17-79
+61-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:60:25-76
 62
 63                <category android:name="android.intent.category.DEFAULT" />
-63-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:61:17-76
-63-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:61:27-73
+63-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:61:17-76
+63-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:61:27-73
 64
 65                <data android:mimeType="vnd.android.cursor.item/text_note" />
-65-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:62:17-78
-65-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:62:23-75
+65-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:62:17-78
+65-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:62:23-75
 66                <data android:mimeType="vnd.android.cursor.item/call_note" />
-66-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:62:17-78
-66-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:62:23-75
+66-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:62:17-78
+66-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:62:23-75
 67            </intent-filter>
 68            <intent-filter>
-68-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:66:13-69:29
+68-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:66:13-69:29
 69                <action android:name="android.intent.action.SEARCH" />
-69-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:67:17-71
-69-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:67:25-68
+69-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:67:17-71
+69-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:67:25-68
 70
 71                <category android:name="android.intent.category.DEFAULT" />
-71-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:61:17-76
-71-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:61:27-73
+71-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:61:17-76
+71-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:61:27-73
 72            </intent-filter>
 73
 74            <meta-data
-74-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:71:13-73:54
+74-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:71:13-73:54
 75                android:name="android.app.searchable"
-75-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:72:17-54
+75-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:72:17-54
 76                android:resource="@xml/searchable" />
-76-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:73:17-51
+76-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:73:17-51
 77        </activity>
 78
 79        <provider
-79-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:76:9-79:43
+79-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:76:9-79:43
 80            android:name="net.micode.notes.data.NotesProvider"
-80-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:77:13-63
+80-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:77:13-63
 81            android:authorities="micode_notes"
-81-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:78:13-47
+81-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:78:13-47
 82            android:multiprocess="true" />
-82-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:79:13-40
+82-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:79:13-40
 83
 84        <receiver
-84-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:81:9-93:20
+84-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:81:9-93:20
 85            android:name="net.micode.notes.widget.NoteWidgetProvider_2x"
-85-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:82:13-57
+85-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:82:13-57
 86            android:label="@string/app_widget2x2" >
-86-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:83:13-50
+86-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:83:13-50
 87            <intent-filter>
-87-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:84:13-88:29
+87-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:84:13-88:29
 88                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-88-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:85:17-84
-88-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:85:25-81
+88-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:85:17-84
+88-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:85:25-81
 89                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
-89-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:86:17-85
-89-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:86:25-82
+89-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:86:17-85
+89-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:86:25-82
 90                <action android:name="android.intent.action.PRIVACY_MODE_CHANGED" />
-90-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:87:17-85
-90-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:87:25-82
+90-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:87:17-85
+90-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:87:25-82
 91            </intent-filter>
 92
 93            <meta-data
-93-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:90:13-92:58
+93-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:90:13-92:58
 94                android:name="android.appwidget.provider"
-94-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:91:17-58
+94-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:91:17-58
 95                android:resource="@xml/widget_2x_info" />
-95-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:92:17-55
+95-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:92:17-55
 96        </receiver>
 97        <receiver
-97-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:94:9-107:20
+97-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:94:9-107:20
 98            android:name="net.micode.notes.widget.NoteWidgetProvider_4x"
-98-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:95:13-57
+98-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:95:13-57
 99            android:label="@string/app_widget4x4" >
-99-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:96:13-50
+99-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:96:13-50
 100            <intent-filter>
-100-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:84:13-88:29
+100-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:84:13-88:29
 101                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-101-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:85:17-84
-101-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:85:25-81
+101-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:85:17-84
+101-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:85:25-81
 102                <action android:name="android.appwidget.action.APPWIDGET_DELETED" />
-102-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:86:17-85
-102-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:86:25-82
+102-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:86:17-85
+102-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:86:25-82
 103                <action android:name="android.intent.action.PRIVACY_MODE_CHANGED" />
-103-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:87:17-85
-103-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:87:25-82
+103-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:87:17-85
+103-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:87:25-82
 104            </intent-filter>
 105
 106            <meta-data
-106-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:90:13-92:58
+106-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:90:13-92:58
 107                android:name="android.appwidget.provider"
-107-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:91:17-58
+107-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:91:17-58
 108                android:resource="@xml/widget_4x_info" />
-108-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:92:17-55
+108-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:92:17-55
 109        </receiver>
 110        <receiver android:name="net.micode.notes.ui.AlarmInitReceiver" >
-110-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:109:9-113:20
-110-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:109:19-55
+110-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:109:9-113:20
+110-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:109:19-55
 111            <intent-filter>
-111-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:110:13-112:29
+111-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:110:13-112:29
 112                <action android:name="android.intent.action.BOOT_COMPLETED" />
-112-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:111:17-79
-112-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:111:25-76
+112-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:111:17-79
+112-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:111:25-76
 113            </intent-filter>
 114        </receiver>
 115        <receiver
-115-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:115:9-118:20
+115-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:115:9-118:20
 116            android:name="net.micode.notes.ui.AlarmReceiver"
-116-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:116:13-61
+116-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:116:13-61
 117            android:process=":remote" >
-117-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:117:13-38
+117-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:117:13-38
 118        </receiver>
 119
 120        <activity
-120-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:120:9-125:20
+120-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:120:9-125:20
 121            android:name="net.micode.notes.ui.AlarmAlertActivity"
-121-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:121:13-50
+121-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:121:13-50
 122            android:label="@string/app_name"
-122-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:122:13-45
+122-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:122:13-45
 123            android:launchMode="singleInstance"
-123-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:123:13-48
+123-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:123:13-48
 124            android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar" >
-124-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:124:13-75
+124-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:124:13-75
 125        </activity>
 126        <activity
-126-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:127:9-132:20
+126-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:127:9-132:20
 127            android:name="net.micode.notes.ui.NotesPreferenceActivity"
-127-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:128:13-71
+127-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:128:13-71
 128            android:label="@string/preferences_title"
-128-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:129:13-54
+128-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:129:13-54
 129            android:launchMode="singleTop"
-129-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:130:13-43
+129-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:130:13-43
 130            android:theme="@android:style/Theme.Holo.Light" >
-130-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:131:13-60
+130-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:131:13-60
 131        </activity>
 132
 133        <service
-133-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:134:9-137:19
+133-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:134:9-137:19
 134            android:name="net.micode.notes.gtask.remote.GTaskSyncService"
-134-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:135:13-74
+134-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:135:13-74
 135            android:exported="false" >
-135-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:136:13-37
+135-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:136:13-37
 136        </service>
 137
 138        <meta-data
-138-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:139:9-141:52
+138-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:139:9-141:52
 139            android:name="android.app.default_searchable"
-139-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:140:13-58
+139-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:140:13-58
 140            android:value=".ui.NoteEditActivity" />
-140-->C:\Users\zyh\AndroidStudioProjects\Notes\app\src\main\AndroidManifest.xml:141:13-49
+140-->/Users/wdfan/AndroidStudioProjects/android/app/src/main/AndroidManifest.xml:141:13-49
 141    </application>
 142
 143</manifest>

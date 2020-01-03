@@ -41,3 +41,5 @@ Thumbs.db
 .idea
 gradle
 .gradle
+local.properties
+gradlew.bat
