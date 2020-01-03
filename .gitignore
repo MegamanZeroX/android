@@ -41,5 +41,7 @@ Thumbs.db
 .idea
 gradle
 .gradle
-local.properties
+/local.properties
 gradlew.bat
+/build
+*.iml
