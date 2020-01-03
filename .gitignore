@@ -42,6 +42,5 @@ Thumbs.db
 gradle
 .gradle
 /local.properties
-gradlew.bat
 /build
 *.iml
