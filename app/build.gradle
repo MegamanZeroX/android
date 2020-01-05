@@ -6,8 +6,8 @@ android {
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "net.micode.notes"
-        minSdkVersion 14
-        targetSdkVersion 14
+        minSdkVersion 21
+        targetSdkVersion 21
     }
 
     buildTypes {
