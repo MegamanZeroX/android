@@ -95,7 +95,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     private static final String PREFERENCE_ADD_INTRODUCTION = "net.micode.notes.introduction";
 
     private enum ListEditState {
-        NOTE_LIST, SUB_FOLDER, CALL_RECORD_FOLDER, SEARCH_RESULT
+        NOTE_LIST, SUB_FOLDER, CALL_RECORD_FOLDER, TRASH
     };
 
     private ListEditState mState;
@@ -132,20 +132,23 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
 
     private NoteItemData mFocusNoteDataItem;
 
-    private static final String NORMAL_SELECTION = NoteColumns.PARENT_ID + "=?";
+    private static final String NORMAL_SELECTION = NoteColumns.PARENT_ID + "=?" + " AND " + NoteColumns.PARENT_ID + " != -3";
 
     private static final String ROOT_FOLDER_SELECTION = "(" + NoteColumns.TYPE + "<>"
             + Notes.TYPE_SYSTEM + " AND " + NoteColumns.PARENT_ID + "=?)" + " OR ("
             + NoteColumns.ID + "=" + Notes.ID_CALL_RECORD_FOLDER + " AND "
-            + NoteColumns.NOTES_COUNT + ">0)";
+            + NoteColumns.NOTES_COUNT + ">0)" + " AND " + NoteColumns.PARENT_ID + " != -3" ;
 
     private static final String inRootSearch = "("   + NoteColumns.SNIPPET +  "  LIKE ? ) " +
-            " AND ( " + NoteColumns.TYPE + "= 0 )" + " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )" ;
+            " AND ( " + NoteColumns.TYPE + "= 0 )" + " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )"
+            + " AND " + NoteColumns.PARENT_ID + " != -3";
 
     private static final String inClassification = NORMAL_SELECTION + " AND ( "+
             NoteColumns.SNIPPET + " LIKE ? )";
-    private static final String TRASH_FOLDER_SELECTION = "(" + NoteColumns.TYPE + "= 3 )" +
+
+    private static final String TRASH_FOLDER_SELECTION = "(" + NoteColumns.PARENT_ID + "= -3 )" +
             " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )" ;
+
     private static final String inFolder = "";
 
     private final static int REQUEST_CODE_OPEN_NODE = 102;
@@ -493,18 +496,18 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         new AsyncTask<Void, Void, HashSet<AppWidgetAttribute>>() {
             protected HashSet<AppWidgetAttribute> doInBackground(Void... unused) {
                 HashSet<AppWidgetAttribute> widgets = mNotesListAdapter.getSelectedWidget();
-                if (!isSyncMode()) {
+                if (mState == ListEditState.TRASH) {
                     // if not synced, delete notes directly
-                    if (DataUtils.batchDeleteNotes(mContentResolver, mNotesListAdapter
-                            .getSelectedItemIds())) {
-                    } else {
+                    if (DataUtils.batchDeleteNotes(mContentResolver, mNotesListAdapter.getSelectedItemIds())) {
+                    }
+                    else {
                         Log.e(TAG, "Delete notes error, should not happens");
                     }
-                } else {
+                }
+                else {
                     // in sync mode, we'll move the deleted note into the trash
                     // folder
-                    if (!DataUtils.batchMoveToFolder(mContentResolver, mNotesListAdapter
-                            .getSelectedItemIds(), Notes.ID_TRASH_FOLER)) {
+                    if (!DataUtils.batchMoveToFolder(mContentResolver, mNotesListAdapter.getSelectedItemIds(), Notes.ID_TRASH_FOLER)) {
                         Log.e(TAG, "Move notes to trash folder error, should not happens");
                     }
                 }
@@ -703,6 +706,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             case NOTE_LIST:
                 super.onBackPressed();
                 break;
+            case  TRASH:
+                mState = ListEditState.NOTE_LIST;
+                startAsyncNotesListQuery();
             default:
                 break;
         }
@@ -830,6 +836,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                 break;
             }
             case R.id.menu_trash: {
+                mState = ListEditState.TRASH;
                 showTrash();
                 break;
             }

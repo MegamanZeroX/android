@@ -97,6 +97,7 @@ public class NotesListAdapter extends CursorAdapter {
                 if (id == Notes.ID_ROOT_FOLDER) {
                     Log.d(TAG, "Wrong item id, should not happen");
                 } else {
+                    System.out.println("check id :   "+ String.valueOf(id));
                     itemSet.add(id);
                 }
             }
