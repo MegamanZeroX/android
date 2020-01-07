@@ -826,9 +826,6 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                 createNewNote();
                 break;
             }
-            case R.id.menu_search:
-                onSearchRequested();
-                break;
             default:
                 break;
         }
