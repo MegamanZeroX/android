@@ -139,7 +139,7 @@ public class DataUtils {
     public static boolean visibleInNoteDatabase(ContentResolver resolver, long noteId, int type) {
         Cursor cursor = resolver.query(ContentUris.withAppendedId(Notes.CONTENT_NOTE_URI, noteId),
                 null,
-                NoteColumns.TYPE + "=? AND " + NoteColumns.PARENT_ID + "<>" + Notes.ID_TRASH_FOLER,
+                NoteColumns.TYPE + "=? ",
                 new String [] {String.valueOf(type)},
                 null);
 

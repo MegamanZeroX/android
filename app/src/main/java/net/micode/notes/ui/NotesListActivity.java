@@ -149,7 +149,9 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     private static final String TRASH_FOLDER_SELECTION = "(" + NoteColumns.PARENT_ID + "= -3 )" +
             " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )" ;
 
-    private static final String inFolder = "";
+    private static final String inTrash = "(" + NoteColumns.PARENT_ID + "= -3 )" +
+            " AND (" + NoteColumns.SNIPPET + " LIKE ? )" +
+            " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )";
 
     private final static int REQUEST_CODE_OPEN_NODE = 102;
     private final static int REQUEST_CODE_NEW_NODE  = 103;
@@ -225,7 +227,13 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     @Override
     protected void onStart() {
         super.onStart();
-        startAsyncNotesListQuery();
+        if(mState == ListEditState.TRASH){
+            showTrash();
+        }
+        else{
+            startAsyncNotesListQuery();
+        }
+
     }
 
     private void initResources() {
@@ -709,6 +717,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             case  TRASH:
                 mState = ListEditState.NOTE_LIST;
                 startAsyncNotesListQuery();
+                break;
             default:
                 break;
         }
@@ -749,7 +758,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         if (mNotesListView != null) {
             mNotesListView.setOnCreateContextMenuListener(null);
         }
-        super.onContextMenuClosed(menu);
+        //super.onContextMenuClosed(menu);
     }
 
     @Override
@@ -798,7 +807,10 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             getMenuInflater().inflate(R.menu.sub_folder, menu);
         } else if (mState == ListEditState.CALL_RECORD_FOLDER) {
             getMenuInflater().inflate(R.menu.call_record_folder, menu);
-        } else {
+        } else if (mState == ListEditState.TRASH) {
+            getMenuInflater().inflate(R.menu.note_list_trash, menu);
+        }
+        else{
             Log.e(TAG, "Wrong state:" + mState);
         }
         return true;
@@ -840,6 +852,8 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                 showTrash();
                 break;
             }
+            case R.id.action_continue:
+                break;
             default:
                 break;
         }
@@ -931,17 +945,13 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
 
         @Override
         public void afterTextChanged(Editable s) {
-            if(s.length() == 0){
+            if(s.length() == 0 && mState != ListEditState.TRASH){
                 ivDeleteText.setVisibility(View.GONE);//当文本框为空时，则叉叉消失
                 startAsyncNotesListQuery();
             }
             else {
                 ivDeleteText.setVisibility(View.VISIBLE);
-                /*mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
-                        Notes.CONTENT_NOTE_URI, NoteItemData.PROJECTION, selection, new String[] {
-                                String.valueOf(mCurrentFolderId)
-                        }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
-                */
+
                 if(mState == ListEditState.NOTE_LIST){
                     System.out.println("NOTE_LIST:  " + mSearch_edit.getText());
                     mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
@@ -959,6 +969,12 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                             }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
                 }
 
+                if(mState == ListEditState.TRASH){
+                    mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
+                            Notes.CONTENT_NOTE_URI, NoteItemData.PROJECTION, inTrash, new String[] {
+                                    "%" + mSearch_edit.getText() + "%",
+                            }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
+                }
             }
         }
     }
@@ -977,6 +993,10 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                 }
 
                 switch (mState) {
+                    case TRASH:
+                        openNode(item);
+                        //mState = ListEditState.NOTE_LIST;
+                        break;
                     case NOTE_LIST:
                         if (item.getType() == Notes.TYPE_FOLDER
                                 || item.getType() == Notes.TYPE_SYSTEM) {
