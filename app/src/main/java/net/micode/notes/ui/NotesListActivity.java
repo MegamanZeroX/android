@@ -66,6 +66,7 @@ import net.micode.notes.R;
 import net.micode.notes.data.Notes;
 import net.micode.notes.data.Notes.NoteColumns;
 import net.micode.notes.gtask.remote.GTaskSyncService;
+import net.micode.notes.model.Note;
 import net.micode.notes.model.WorkingNote;
 import net.micode.notes.tool.BackupUtils;
 import net.micode.notes.tool.DataUtils;
@@ -141,7 +142,8 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     private static final String inRootSearch = "("   + NoteColumns.SNIPPET +  "  LIKE ? ) " +
             " AND ( " + NoteColumns.TYPE + "= 0 )" + " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )" ;
 
-    private static final String inFolder = "";
+    private static final String inClassification = NORMAL_SELECTION + " AND ( "+
+            NoteColumns.SNIPPET + " LIKE ? )";
 
     private final static int REQUEST_CODE_OPEN_NODE = 102;
     private final static int REQUEST_CODE_NEW_NODE  = 103;
@@ -924,13 +926,21 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                         }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
                 */
                 if(mState == ListEditState.NOTE_LIST){
-                    System.out.println(mSearch_edit.getText());
+                    System.out.println("NOTE_LIST:  " + mSearch_edit.getText());
                     mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
                             Notes.CONTENT_NOTE_URI, NoteItemData.PROJECTION, inRootSearch, new String[] {
-                                   "%" + String.valueOf(mSearch_edit.getText() + "%" )
+                                   "%" + mSearch_edit.getText() + "%"
                             }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
                 }
 
+                if(mState == ListEditState.SUB_FOLDER){
+                    System.out.println( String.valueOf(mCurrentFolderId) );
+                    mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
+                            Notes.CONTENT_NOTE_URI, NoteItemData.PROJECTION, inClassification, new String[] {
+                                    String.valueOf(mCurrentFolderId),
+                                    "%" + mSearch_edit.getText() + "%",
+                            }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
+                }
             }
         }
     }
