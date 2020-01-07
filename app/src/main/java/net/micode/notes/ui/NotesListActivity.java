@@ -930,6 +930,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                                    "%" + String.valueOf(mSearch_edit.getText() + "%" )
                             }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
                 }
+
             }
         }
     }
