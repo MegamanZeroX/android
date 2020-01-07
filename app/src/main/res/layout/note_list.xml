@@ -26,6 +26,46 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
+        <RelativeLayout android:id="@+id/top"
+            android:layout_width="fill_parent"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@null"
+            android:layout_height="60dp">
+
+            <RelativeLayout
+                android:id="@+id/rlSearchFrameDelete"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical" >
+
+                <EditText android:id="@+id/search_edit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:background="@null"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="20sp"
+                    android:hint="Searching notes"/>
+
+                <Button android:id="@+id/ivDeleteText"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/cancel"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="20dp"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
         <TextView
             android:id="@+id/tv_title_bar"
             android:layout_width="fill_parent"

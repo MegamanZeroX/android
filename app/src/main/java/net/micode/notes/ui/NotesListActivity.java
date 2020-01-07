@@ -45,6 +45,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.MotionEvent;
+import android.view.SearchEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnCreateContextMenuListener;
@@ -55,6 +56,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -92,12 +94,16 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     private static final String PREFERENCE_ADD_INTRODUCTION = "net.micode.notes.introduction";
 
     private enum ListEditState {
-        NOTE_LIST, SUB_FOLDER, CALL_RECORD_FOLDER
+        NOTE_LIST, SUB_FOLDER, CALL_RECORD_FOLDER, SEARCH_RESULT
     };
 
     private ListEditState mState;
 
     private BackgroundQueryHandler mBackgroundQueryHandler;
+
+    private EditText mSearch_edit;
+
+    private Button ivDeleteText;
 
     private NotesListAdapter mNotesListAdapter;
 
@@ -131,6 +137,11 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
             + Notes.TYPE_SYSTEM + " AND " + NoteColumns.PARENT_ID + "=?)" + " OR ("
             + NoteColumns.ID + "=" + Notes.ID_CALL_RECORD_FOLDER + " AND "
             + NoteColumns.NOTES_COUNT + ">0)";
+
+    private static final String inRootSearch = "("   + NoteColumns.SNIPPET +  "  LIKE ? ) " +
+            " AND ( " + NoteColumns.TYPE + "= 0 )" + " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )" ;
+
+    private static final String inFolder = "";
 
     private final static int REQUEST_CODE_OPEN_NODE = 102;
     private final static int REQUEST_CODE_NEW_NODE  = 103;
@@ -213,6 +224,10 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         mContentResolver = this.getContentResolver();
         mBackgroundQueryHandler = new BackgroundQueryHandler(this.getContentResolver());
         mCurrentFolderId = Notes.ID_ROOT_FOLDER;
+        mSearch_edit = findViewById(R.id.search_edit);
+        mSearch_edit.addTextChangedListener(new searchService());
+        ivDeleteText = findViewById(R.id.ivDeleteText);
+        ivDeleteText.setOnClickListener(new deleteText());
         mNotesListView = (ListView) findViewById(R.id.notes_list);
         mNotesListView.addFooterView(LayoutInflater.from(this).inflate(R.layout.note_list_footer, null),
                 null, false);
@@ -820,7 +835,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
 
     @Override
     public boolean onSearchRequested() {
-        startSearch(null, false, null /* appData */, false);
+        startSearch(null, true, null /* appData */, false);
         return true;
     }
 
@@ -876,6 +891,48 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         from.startActivityIfNeeded(intent, -1);
     }
 
+    private class deleteText implements View.OnClickListener{
+        @Override
+        public void onClick(View v){
+            mSearch_edit.setText("");
+        }
+    }
+
+    private class searchService implements TextWatcher
+    {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if(s.length() == 0){
+                ivDeleteText.setVisibility(View.GONE);//当文本框为空时，则叉叉消失
+                startAsyncNotesListQuery();
+            }
+            else {
+                ivDeleteText.setVisibility(View.VISIBLE);
+                /*mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
+                        Notes.CONTENT_NOTE_URI, NoteItemData.PROJECTION, selection, new String[] {
+                                String.valueOf(mCurrentFolderId)
+                        }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
+                */
+                if(mState == ListEditState.NOTE_LIST){
+                    System.out.println(mSearch_edit.getText());
+                    mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
+                            Notes.CONTENT_NOTE_URI, NoteItemData.PROJECTION, inRootSearch, new String[] {
+                                   "%" + String.valueOf(mSearch_edit.getText() + "%" )
+                            }, NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
+                }
+            }
+        }
+    }
     private class OnListItemClickListener implements OnItemClickListener {
 
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
