@@ -43,13 +43,12 @@
 
                 <EditText android:id="@+id/search_edit"
                     android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:singleLine="true"
-                    android:background="@null"
-                    android:layout_marginRight="10dp"
+                    android:background="@drawable/custom_edittext_background"
                     android:paddingLeft="20dp"
                     android:textSize="20sp"
-                    android:hint="Searching notes"/>
+                    android:hint="Searching"/>
 
                 <Button android:id="@+id/ivDeleteText"
                     android:layout_width="30dp"
@@ -57,7 +56,7 @@
                     android:layout_alignParentRight="true"
                     android:background="@drawable/cancel"
                     android:layout_centerInParent="true"
-                    android:paddingRight="20dp"
+                    android:layout_marginRight="10dp"
                     android:visibility="invisible"/>
 
             </RelativeLayout>
