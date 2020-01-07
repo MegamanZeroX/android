@@ -141,6 +141,8 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
     private static final String inRootSearch = "("   + NoteColumns.SNIPPET +  "  LIKE ? ) " +
             " AND ( " + NoteColumns.TYPE + "= 0 )" + " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )" ;
 
+    private static final String TRASH_FOLDER_SELECTION = "(" + NoteColumns.TYPE + "= 3 )" +
+            " AND (" + NoteColumns.SNIPPET + " IS NOT NULL )" ;
     private static final String inFolder = "";
 
     private final static int REQUEST_CODE_OPEN_NODE = 102;
@@ -824,6 +826,10 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                 createNewNote();
                 break;
             }
+            case R.id.menu_trash: {
+                showTrash();
+                break;
+            }
             default:
                 break;
         }
@@ -886,6 +892,12 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
         Activity from = getParent() != null ? getParent() : this;
         Intent intent = new Intent(from, NotesPreferenceActivity.class);
         from.startActivityIfNeeded(intent, -1);
+    }
+
+    private void showTrash() {
+        mBackgroundQueryHandler.startQuery(FOLDER_NOTE_LIST_QUERY_TOKEN, null,
+            Notes.CONTENT_NOTE_URI, NoteItemData.PROJECTION, TRASH_FOLDER_SELECTION,null,
+                NoteColumns.TYPE + " DESC," + NoteColumns.MODIFIED_DATE + " DESC");
     }
 
     private class deleteText implements View.OnClickListener{
