@@ -76,20 +76,20 @@
             android:layout_height="wrap_content"
             android:background="@drawable/title_bar_bg"
             android:visibility="gone"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:singleLine="true"
-            android:textColor="#FFEAD1AE"
+            android:textColor="#000000"
             android:textSize="@dimen/text_font_size_medium" />
 
         <ListView
             android:id="@+id/notes_list"
+            android:stateListAnimator="@null"
             android:layout_width="fill_parent"
             android:layout_height="0dip"
             android:layout_weight="1"
             android:cacheColorHint="@null"
             android:listSelector="@android:color/transparent"
-            android:divider="@null"
-            android:fadingEdge="@null" />
+            android:divider="@null" />
     </LinearLayout>
 
     <Button
