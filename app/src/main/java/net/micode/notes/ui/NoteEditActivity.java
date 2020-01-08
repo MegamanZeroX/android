@@ -601,7 +601,7 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                 }
             } else {
                 if (!DataUtils.batchMoveToFolder(getContentResolver(), ids, Notes.ID_TRASH_FOLER)) {
-                    Log.e(TAG, "Move notes to trash folder error, should not happens");
+                    Log.e(TAG, "Move notes to trash classification error, should not happens");
                 }
             }
         }

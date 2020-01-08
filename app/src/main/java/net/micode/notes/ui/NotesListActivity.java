@@ -463,7 +463,7 @@ public class NotesListActivity extends Activity implements OnClickListener, OnIt
                     if (cursor != null && cursor.getCount() > 0) {
                         showFolderListMenu(cursor);
                     } else {
-                        Log.e(TAG, "Query folder failed");
+                        Log.e(TAG, "Query classification failed");
                     }
                     break;
                 default:
