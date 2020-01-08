@@ -596,8 +596,15 @@ public class NoteEditActivity extends Activity implements OnClickListener,
                 Log.d(TAG, "Wrong note id, should not happen");
             }
             if (!isSyncMode()) {
-                if (!DataUtils.batchDeleteNotes(getContentResolver(), ids)) {
-                    Log.e(TAG, "Delete Note error");
+                long floder = mWorkingNote.getFolderId();
+                if (floder == -3) {
+                    if (!DataUtils.batchDeleteNotes(getContentResolver(), ids)) {
+                        Log.e(TAG, "Delete Note error");
+                    }
+                } else {
+                    if (!DataUtils.batchMoveToFolder(getContentResolver(), ids, Notes.ID_TRASH_FOLER)) {
+                        Log.e(TAG, "Move notes to trash folder error, should not happens");
+                    }
                 }
             } else {
                 if (!DataUtils.batchMoveToFolder(getContentResolver(), ids, Notes.ID_TRASH_FOLER)) {
